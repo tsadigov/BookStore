@@ -1,0 +1,6 @@
+spring:
+  main:
+    allow-circular-references: true
+  profiles:
+    include:
+      - db
