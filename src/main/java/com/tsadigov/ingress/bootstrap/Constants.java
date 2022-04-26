@@ -64,9 +64,8 @@ public class Constants {
     /**
      * Role Names
      */
-    public static final String ROLE_ADMIN = "ROLE_ADMIN";
-    public static final String ROLE_SELLER = "ROLE_SELLER";
-    public static final String ROLE_CUSTOMER = "ROLE_CUSTOMER";
+    public static final String ROLE_USER = "ROLE_USER";
+    public static final String ROLE_PUBLISHER = "ROLE_PUBLISHER";
 
     /**
      * Regex Patterns

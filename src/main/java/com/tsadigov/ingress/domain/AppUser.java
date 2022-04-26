@@ -1,9 +1,7 @@
 package com.tsadigov.ingress.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -13,6 +11,7 @@ import java.util.Collection;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class AppUser {
 
     @Id
@@ -22,12 +21,19 @@ public class AppUser {
     @Column(unique = true, nullable = false)
     private String username;
 
+    @Column(unique = true, nullable = false)
+    private String email;
+
     @Column(nullable = false)
     private String password;
+
+    @Column(nullable = false)
+    private String name;
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Collection<Role> roles;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "author")
     private Collection<Book> books;
 

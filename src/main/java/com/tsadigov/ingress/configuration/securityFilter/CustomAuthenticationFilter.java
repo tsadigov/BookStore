@@ -3,9 +3,9 @@ package com.tsadigov.ingress.configuration.securityFilter;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.project.ecommerce.dto.AuthDTO;
-import com.project.ecommerce.dto.LoginDTO;
-import com.project.ecommerce.dto.ResponseDTO;
+import com.tsadigov.ingress.dto.AuthDTO;
+import com.tsadigov.ingress.dto.LoginDTO;
+import com.tsadigov.ingress.dto.ResponseDTO;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -24,7 +24,7 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.stream.Collectors;
 
-import static com.project.ecommerce.bootstrap.Constants.*;
+import static com.tsadigov.ingress.bootstrap.Constants.*;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @Slf4j

@@ -18,9 +18,9 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String name;
+    private String bookName;
 
-    private String details;
+    private String bookDetails;
 
     @ManyToOne
     private AppUser author;
