@@ -22,7 +22,9 @@ public class Book {
 
     private String bookDetails;
 
+    private String author;
+
     @ManyToOne
-    private AppUser author;
+    private AppUser publisher;
 
 }

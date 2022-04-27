@@ -69,13 +69,15 @@ public class DataInitializer implements CommandLineRunner {
         Book book1 = Book.builder()
                 .bookName("Titans1")
                 .bookDetails("About ancient")
-                .author(publisher1)
+                .author("J.K Rowlong")
+                .publisher(publisher1)
                 .build();
 
         Book book2 = Book.builder()
                 .bookName("Titans2")
                 .bookDetails("About ancient")
-                .author(publisher2)
+                .author("Tolstoy")
+                .publisher(publisher2)
                 .build();
 
         bookRepo.save(book1);
