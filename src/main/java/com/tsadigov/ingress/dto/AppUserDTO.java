@@ -10,5 +10,4 @@ public class AppUserDTO {
     private String email;
     private String name;
 
-
 }
