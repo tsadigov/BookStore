@@ -4,9 +4,11 @@ import com.tsadigov.ingress.domain.AppUser;
 import com.tsadigov.ingress.domain.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 public interface AppUserRepo extends JpaRepository<AppUser, Long> {
 
     AppUser findByUsername(String username);
-    AppUser findByRolesMatches(String role);
+    List<AppUser> findByRolesMatches(String role);
 
 }

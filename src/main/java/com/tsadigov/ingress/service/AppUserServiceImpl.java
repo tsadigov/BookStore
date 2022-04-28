@@ -84,7 +84,7 @@ public class AppUserServiceImpl implements UserDetailsService, AppUserService {
 
     @Override
     public List<AppUserDTO> getPublishers() {
-        List<AppUserDTO> publishers = userRepo.findByRolesMatches(ROLE_PUBLISHER);
+        List<AppUserDTO> publishers = Mapper.mapAll(userRepo.findByRolesMatches(ROLE_PUBLISHER), AppUserDTO.class);
         return null;
     }
 
