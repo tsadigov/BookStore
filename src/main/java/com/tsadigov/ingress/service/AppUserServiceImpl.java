@@ -24,8 +24,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import static com.tsadigov.ingress.bootstrap.Constants.ROLE_USER;
-import static com.tsadigov.ingress.bootstrap.Constants.USER_NOT_FOUND;
+import static com.tsadigov.ingress.bootstrap.Constants.*;
 
 @Service
 @RequiredArgsConstructor
@@ -81,6 +80,12 @@ public class AppUserServiceImpl implements UserDetailsService, AppUserService {
 
         AppUserDTO userDTO = Mapper.map(user, AppUserDTO.class);
         return userDTO;
+    }
+
+    @Override
+    public List<AppUserDTO> getPublishers() {
+        List<AppUserDTO> publishers = userRepo.findByRolesMatches(ROLE_PUBLISHER);
+        return null;
     }
 
 }

@@ -1,14 +1,14 @@
-spring:
-  datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: &connectionUrl jdbc:mysql://${DB_CONNECTION_IP:localhost}:${DB_CONNECTION_PORT:3306}/book-store?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&useJDBCCompliantTizmezoneShift=true&useLegacyDatetimeCode=false&serverTimzezone=UTC&zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF-8
-    username: &username ${DB_CONNECTION_USERNAME:root}
-    password: &password ${DB_CONNECTION_PASSWORD:Qafqaz123}
-  jpa:
-    database: mysql
-    #    database-platform: org.hibernate.dialect.MySQL55Dialect
-    show-sql: false
-    generate-ddl: false
-    hibernate:
-      ddl-auto: create-drop
+#spring:
+#  datasource:
+#    type: com.zaxxer.hikari.HikariDataSource
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    url: &connectionUrl jdbc:mysql://${DB_CONNECTION_IP:localhost}:${DB_CONNECTION_PORT:3306}/book-store?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&useJDBCCompliantTizmezoneShift=true&useLegacyDatetimeCode=false&serverTimzezone=UTC&zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF-8
+#    username: &username ${DB_CONNECTION_USERNAME:root}
+#    password: &password ${DB_CONNECTION_PASSWORD:Qafqaz123}
+#  jpa:
+#    database: mysql
+#    #    database-platform: org.hibernate.dialect.MySQL55Dialect
+#    show-sql: false
+#    generate-ddl: false
+#    hibernate:
+#      ddl-auto: create-drop
