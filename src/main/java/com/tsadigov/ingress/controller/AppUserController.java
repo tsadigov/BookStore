@@ -7,10 +7,9 @@ import com.tsadigov.ingress.dto.SignUpDTO;
 import com.tsadigov.ingress.service.AppUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 import static com.tsadigov.ingress.bootstrap.Constants.*;
 
@@ -22,7 +21,7 @@ public class AppUserController {
     private final AppUserService userService;
 
     @PostMapping
-    public ResponseEntity<ResponseDTO> signUp(@RequestBody SignUpDTO signUpDTO){
+    public ResponseEntity<ResponseDTO> signUp(@RequestBody SignUpDTO signUpDTO) {
         AppUserDTO appUserDTO = userService.signUp(signUpDTO);
         ResponseDTO responseDTO = ResponseDTO.builder()
                 .code(CREATED_CODE)
@@ -34,4 +33,17 @@ public class AppUserController {
                 .body(responseDTO);
     }
 
+    @GetMapping
+    public ResponseEntity<ResponseDTO> getPublishers() {
+
+        List<AppUserDTO> publishers = userService.getPublishers();
+        ResponseDTO responseDTO = ResponseDTO.builder()
+                .code(SUCCESS_CODE)
+                .message(SUCCESS)
+                .response(publishers)
+                .build();
+
+        return ResponseEntity.ok()
+                .body(responseDTO);
+    }
 }
