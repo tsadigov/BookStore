@@ -9,6 +9,10 @@ import java.util.List;
 public interface AppUserRepo extends JpaRepository<AppUser, Long> {
 
     AppUser findByUsername(String username);
-    List<AppUser> findByRolesMatches(String role);
+
+
+//    List<AppUser> findByRolesMatches(List<Role> roles);
+
+    List<AppUser> findAppUsersByRolesEquals(Role role);
 
 }
